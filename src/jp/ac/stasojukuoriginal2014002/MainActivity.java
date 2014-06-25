@@ -51,7 +51,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 			helper = new MySQLiteOpenHelper(getApplicationContext());
 		}
 		try {
-			sdb = helper.setWritableDatabase();
+			sdb = helper.getWritableDatabase();
 		}catch(SQLiteException e){
 			//異常終了
 			return;
@@ -64,7 +64,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 		//生成して代入用のIntentインスタンス変数を用意
 		Intent intent = null;
-		switch(v getId()) { //どのボタンが押されたか判定
+		switch(v.getId())  { //どのボタンが押されたか判定
 			case R.id.btnENTRY://登録ボタンが押された
 				//エディットテキストからの入力内容を取り出す
 				EditText etv = (EditText)findViewById(R.id.edtMsg);
