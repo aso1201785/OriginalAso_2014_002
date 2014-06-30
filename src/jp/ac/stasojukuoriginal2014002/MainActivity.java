@@ -82,7 +82,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 			case R.id.btnMAINTE://メンテボタンが押された
 				//インテントのインスタンス作成
-				intent = new Intent(MainActivity.this, HitokotoActivity.class);
+				intent = new Intent(MainActivity.this, MaintenanceActivity.class);
 				// 次画面のアクティビティ起動
 				startActivity(intent);
 				break;
